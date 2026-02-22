@@ -37,7 +37,7 @@ const leaders = [
   {
     name: "RITESH SAMANTA",
     role: "Founder & CEO",
-    image: "src/assets/ritesh.png",
+    image: "public/ritesh.png",
     bio: "I believe that technology is not just about building solutions — it’s about solving real business challenges. We lead with innovation, collaboration, and a commitment to delivering meaningful digital transformation. Guided by vision, committed to building meaningful technology.",
     socials: {
       portfolio: "https://riteshsamanta.vercel.app/",
