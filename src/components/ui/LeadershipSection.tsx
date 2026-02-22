@@ -6,7 +6,8 @@ import {
   User,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
+import ritesh from "@/assets/ritesh.png";
+import arghya from "@/assets/arghya.png";
 /* ----------------------------------
    Social Icon Mapping
 -----------------------------------*/
@@ -25,7 +26,7 @@ const leaders = [
   {
     name: "ARGHYA GHOSH",
     role: "Founder & CEO",
-    image: "src/assets/arghya.png",
+    image: {arghya},
     bio: "I am a passionate innovator who believe in turning ideas into impactful solutions. Our leadership focuses on creativity, technology, and strategic thinking to help businesses grow in a rapidly evolving digital world. We don’t just follow trends — we create solutions that drive progress.",
     socials: {
       portfolio: "https://arghyaghosh.online/",
@@ -37,7 +38,7 @@ const leaders = [
   {
     name: "RITESH SAMANTA",
     role: "Founder & CEO",
-    image: "src/assets/ritesh.png",
+    image: {ritesh},
     bio: "I believe that technology is not just about building solutions — it’s about solving real business challenges. We lead with innovation, collaboration, and a commitment to delivering meaningful digital transformation. Guided by vision, committed to building meaningful technology.",
     socials: {
       portfolio: "https://riteshsamanta.vercel.app/",
