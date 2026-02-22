@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/hero-bg.avif';
 
 const containerVariants = {
   hidden: { opacity: 0 },

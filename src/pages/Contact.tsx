@@ -11,7 +11,7 @@ import PageTransition from '@/components/animations/PageTransition';
 import AnimatedSection from '@/components/animations/AnimatedSection';
 import AnimatedItem from '@/components/animations/AnimatedItem';
 import { supabase } from '@/integrations/supabase/client';
-import officeBg from '@/assets/office-bg.jpg';
+import officeBg from '@/assets/office-bg.avif';
 
 const Contact = () => {
   const { toast } = useToast();

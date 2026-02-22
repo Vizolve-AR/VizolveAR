@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from './animations/AnimatedSection';
 import AnimatedItem from './animations/AnimatedItem';
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.avif";
 import { Link } from "react-router-dom";
 
 const Careers = () => {

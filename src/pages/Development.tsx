@@ -8,7 +8,7 @@ import PageTransition from '@/components/animations/PageTransition';
 import AnimatedSection from '@/components/animations/AnimatedSection';
 import AnimatedItem from '@/components/animations/AnimatedItem';
 
-import heroImage from '@/assets/dev-hero.jpg';
+import heroImage from '@/assets/dev-hero.avif';
 import webDevImage from '@/assets/web-dev.jpg';
 import mobileDevImage from '@/assets/mobile-dev.jpg';
 

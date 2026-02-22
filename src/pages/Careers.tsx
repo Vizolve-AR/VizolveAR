@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/animations/PageTransition";
-import careersBg from "@/assets/careers-bg.png";
+import careersBg from "@/assets/careers-bg.avif";
 
 const containerVariants = {
   hidden: { opacity: 0 },

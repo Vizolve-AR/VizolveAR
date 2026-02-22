@@ -5,9 +5,13 @@ import {
   Twitter,
   User,
 } from "lucide-react";
+
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import ritesh from "@/assets/ritesh.png";
-import arghya from "@/assets/arghya.png";
+
+/* ✅ Import Images (Production Safe) */
+import arghyaImg from "@/assets/arghya.png";
+import riteshImg from "@/assets/ritesh.png";
+
 /* ----------------------------------
    Social Icon Mapping
 -----------------------------------*/
@@ -26,25 +30,27 @@ const leaders = [
   {
     name: "ARGHYA GHOSH",
     role: "Founder & CEO",
-    image: {arghya},
+    image: arghyaImg,
     bio: "I am a passionate innovator who believe in turning ideas into impactful solutions. Our leadership focuses on creativity, technology, and strategic thinking to help businesses grow in a rapidly evolving digital world. We don’t just follow trends — we create solutions that drive progress.",
     socials: {
       portfolio: "https://arghyaghosh.online/",
       github: "https://github.com/Arghya-Ghosh75",
       linkedin: "https://www.linkedin.com/in/arghya-ghosh-41271a24b",
-      instagram: "https://www.instagram.com/dilwale_krish?igsh=Z2E0Nnl3MzN6bTI=",
+      instagram:
+        "https://www.instagram.com/dilwale_krish?igsh=Z2E0Nnl3MzN6bTI=",
     },
   },
   {
     name: "RITESH SAMANTA",
     role: "Founder & CEO",
-    image: {ritesh},
+    image: riteshImg,
     bio: "I believe that technology is not just about building solutions — it’s about solving real business challenges. We lead with innovation, collaboration, and a commitment to delivering meaningful digital transformation. Guided by vision, committed to building meaningful technology.",
     socials: {
       portfolio: "https://riteshsamanta.vercel.app/",
       github: "https://github.com/Riteshsamanta03",
       linkedin: "https://www.linkedin.com/in/ritesh-samanta/",
-      instagram: "https://www.instagram.com/iamritesh_03?igsh=MXF4amg2enc4MDVvZQ==",
+      instagram:
+        "https://www.instagram.com/iamritesh_03?igsh=MXF4amg2enc4MDVvZQ==",
     },
   },
 ];
@@ -58,7 +64,7 @@ const LeadershipSection = () => {
   return (
     <section className="py-24 md:py-32 px-6 md:px-16 lg:px-24 max-w-[1400px] mx-auto">
       <div ref={ref} className="opacity-0">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="section-label justify-center mb-6">
@@ -82,7 +88,7 @@ const LeadershipSection = () => {
             >
               {/* Image Section */}
               <div className="relative mb-8">
-                
+
                 {/* Glow */}
                 <div className="absolute -inset-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all duration-500 blur-md" />
 
@@ -115,28 +121,25 @@ const LeadershipSection = () => {
                 {leader.bio}
               </p>
 
-              {/* Dynamic Social Links */}
+              {/* Social Links */}
               <div className="flex gap-3">
                 {leader.socials &&
-                  Object.entries(leader.socials).map(
-                    ([key, link]) => {
-                      const Icon = socialIcons[key];
+                  Object.entries(leader.socials).map(([key, link]) => {
+                    const Icon = socialIcons[key];
+                    if (!Icon) return null;
 
-                      if (!Icon) return null;
-
-                      return (
-                        <a
-                          key={key}
-                          href={link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:shadow-[0_0_12px_rgba(255,59,59,0.3)] transition-all duration-300"
-                        >
-                          <Icon className="w-4 h-4" />
-                        </a>
-                      );
-                    }
-                  )}
+                    return (
+                      <a
+                        key={key}
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:shadow-[0_0_12px_rgba(255,59,59,0.3)] transition-all duration-300"
+                      >
+                        <Icon className="w-4 h-4" />
+                      </a>
+                    );
+                  })}
               </div>
             </div>
           ))}
